@@ -2,36 +2,39 @@
 import os, sys, time
 from Product import Product
 
-if __name__ == '__main__':
-	print 'testing'
-
 def Generate():
 
 	## open and split the csv file
 	infile = open("products.csv", 'r')
 	contents = infile.read()
+	infile.close()
 	products = csvParser(contents)
 	outfile = open('labels.html', 'w')
-	html = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<title>Template</title>\n<link rel="stylesheet" href="_/css/styles.css">\n<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">\n</head>\n<body>'
+	
+	infile = open('header.html', 'r')
+	html = infile.read()
 	outfile.write(html)
+	infile.close()
 
 	for i in range(len(products)):
 		deviceType = products[i].getDeviceType()
 		if(deviceType == "IPHONE"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write(iPhoneLabel(products[i]))
+				outfile.write('\n\t'+iPhoneLabel(products[i]))
 		elif(deviceType == "IPAD"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write(iPadLabel(products[i]))
+				outfile.write('\n\t'+iPadLabel(products[i]))
 		elif(deviceType == "CPU"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write(CPULabel(products[i]))
+				outfile.write('\n\t'+CPULabel(products[i]))
 		else:
 			pass
 			## will be expanded to custom labels in the future
 
-	html = '<!-- javascript at the end for faster load -->\n<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>\n<script src="_/js/script.js"></script>\n<script src="http://localhost:35729/livereload.js"></script>\n</body>\n</html>'
+	infile = open('footer.html', 'r')
+	html = infile.read()
 	outfile.write(html)
+	infile.close()
 
 
 
@@ -79,4 +82,7 @@ def iPadLabel(product):
 def CPULabel(product):
 	output = '<div class="computerLabels">\n<div class="leftBox">\n<div class="computer">'+str(product.getName())+'</div>\n</div>\n<div class="rightBox">\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="specs">'+str(product.getSpecs())+'</div>\n</div>\n</div>'
 	return output
+
+if __name__ == '__main__':
+	Generate()
  
