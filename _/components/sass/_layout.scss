@@ -1,0 +1,238 @@
+@include border-box-sizing;
+
+.computerLabels {
+	overflow: hidden;
+	&:nth-of-type(8n) {
+		page-break-after: always;
+	}
+	background: $spaceGray;
+	color: $white;
+	margin: .1in;
+	width: $inch * 3.5;
+	height: $inch * .875;
+	.leftBox{
+		@include clearfix;
+		width: ($inch * .875) + 5px;
+		height: $inch * .875;
+		float: left;
+		-ms-transform: rotate(-90deg); /* IE 9 */
+    	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+   	transform: rotate(-90deg);
+		.computer {
+			width: $inch * .875;
+			text-align: center;
+			font-size: 14px;
+			margin: auto;
+			margin-top: 20px;
+			padding: 10px 2px;
+			background: $black;
+			color: $white;
+		}
+	}
+	.rightBox {
+		margin-left: -14px;
+		width: $inch * 2.625;
+		height: $inch * .875;
+		float: left;
+		text-align: center;
+		padding-top: 10px;
+		.partNum {
+			font-size: 40px;
+		}
+		.specs {
+			font-size: 16px;
+		}
+	}
+}
+
+.iPadLabels {
+	overflow: hidden;
+	&:nth-of-type(8n) {
+		page-break-after: always;
+	}
+	margin: .1in;
+	width: $inch * 3.5;
+	height: $inch * .875;
+	.leftBox{
+		@include clearfix;
+		width: ($inch * .875) + 5px;
+		height: $inch * .875;
+		float: left;
+		-ms-transform: rotate(-90deg); /* IE 9 */
+    	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+   	transform: rotate(-90deg);
+		.carrier {
+			width: $inch * .875;
+			text-align: center;
+			font-size: 14px;
+			margin: auto;
+			margin-top: 20px;
+			padding: 10px 2px;
+			background: $black;
+			color: $white;
+		}
+	}
+	.rightBox {
+		margin-left: -14px;
+		width: $inch * 2.625;
+		height: $inch * .875;
+		float: left;
+		text-align: center;
+		padding-top: 10px;
+		.partNum {
+			font-size: 40px;
+		}
+		.details {
+			font-size: 20px;
+			.size{
+				display: inline-block;
+			}
+			.name{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+.iPhoneLabels {
+	margin: .1in;
+	width: $inch * 4.66; 
+	height: $inch * 2;
+	text-align: center;
+	&:nth-of-type(4n) {
+		page-break-after: always;
+	}
+	.carrier {
+		background: $black;
+		font-size: 29px;
+		padding: 10px;
+	}
+	.partNum {
+		font-size: 60px;
+		padding: 15px
+	}
+	.details {
+		.size {
+			display: inline-block;
+		}
+		.color {
+			display: inline-block;
+		}
+	}
+}
+
+.iphone5cWide {
+	margin: .1in;
+	width: $inch * 3.5;
+	height: $inch * 2;
+	text-align: center;
+	&:nth-of-type(4n) {
+		page-break-after: always;
+	}
+	.carrier {
+		background: $black;
+		font-size: 20px;
+		padding: 10px;
+	}
+	.partNum {
+		font-size: 50px;
+		padding: 25px 15px
+	}
+	.details {
+		.size {
+			display: inline-block;
+		}
+		.color {
+			display: inline-block;
+		}
+	}
+}
+
+.iphone5c {
+	margin: .1in;
+	width: $inch * 2.333;
+	height: $inch * 2;
+	text-align: center;
+	&:nth-of-type(4n) {
+		page-break-after: always;
+	}
+	.carrier {
+		background: $black;
+		font-size: 16px;
+		padding: 10px;
+	}
+	.partNum {
+		font-size: 36px;
+		padding: 30px 10px
+	}
+	.details {
+		.size {
+			display: inline-block;
+		}
+		.color {
+			display: inline-block;
+		}
+	}
+}
+
+.SILVER {
+	background: $silver;
+	color: $black;
+	.carrier {
+		color: $white;
+	}
+}
+
+.SPACEGRAY {
+	background: $spaceGray;
+	color: $white;
+}
+
+.GOLD {
+	background: $gold;
+	color: $black;
+	.carrier {
+		color: $white;
+	}
+}
+
+.BLUE {
+	background: $blue;
+	color: $white;
+	.carrier {
+		color: $white;
+	}
+}
+
+.WHITE {
+	background: $white;
+	color: $black;
+	.carrier {
+		color: $white;
+	}
+}
+
+.PINK {
+	background: $pink;
+	color: $black;
+	.carrier {
+		color: $white;
+	}
+}
+
+.GREEN {
+	background: $green;
+	color: $black;
+	.carrier {
+		color: $white;
+	}
+}
+
+.YELLOW {
+	background: $yellow;
+	color: $black;
+	.carrier {
+		color: $white;
+	}
+}
