@@ -20,13 +20,13 @@ def Generate():
 		deviceType = products[i].getDeviceType()
 		if(deviceType == "IPHONE"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write('\n\t'+iPhoneLabel(products[i]))
+				outfile.write('\n\n'+iPhoneLabel(products[i]))
 		elif(deviceType == "IPAD"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write('\n\t'+iPadLabel(products[i]))
+				outfile.write('\n\n'+iPadLabel(products[i]))
 		elif(deviceType == "CPU"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write('\n\t'+CPULabel(products[i]))
+				outfile.write('\n\n'+CPULabel(products[i]))
 		else:
 			pass
 			## will be expanded to custom labels in the future
