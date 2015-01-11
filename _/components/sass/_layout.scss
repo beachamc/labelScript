@@ -149,6 +149,60 @@
 	}
 }
 
+.iPhone5sLabels2 {
+	margin: .1in;
+	width: $inch * 7; 
+	height: $inch * 2;
+	text-align: center;
+	&:nth-of-type(4n) {
+		page-break-after: always;
+	}
+	.carrier {
+		background: $black;
+		font-size: 29px;
+		padding: 10px;
+	}
+	.partNum {
+		font-size: 48px;
+		padding: 15px
+	}
+	.details {
+		.size {
+			display: inline-block;
+		}
+		.color {
+			display: inline-block;
+		}
+	}
+}
+
+.iPhone5sLabels1 {
+	margin: .1in;
+	width: $inch * 3.5; 
+	height: $inch * 2;
+	text-align: center;
+	&:nth-of-type(4n) {
+		page-break-after: always;
+	}
+	.carrier {
+		background: $black;
+		font-size: 29px;
+		padding: 10px;
+	}
+	.partNum {
+		font-size: 48px;
+		padding: 15px
+	}
+	.details {
+		.size {
+			display: inline-block;
+		}
+		.color {
+			display: inline-block;
+		}
+	}
+}
+
 .iphone5c {
 	margin: .1in;
 	width: $inch * 2.333;

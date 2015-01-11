@@ -20,7 +20,10 @@ def Generate():
 		deviceType = products[i].getDeviceType()
 		if(deviceType == "IPHONE"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write('\n\n'+iPhoneLabel(products[i]))
+				if(products[i].getName().upper() == "IPHONE 5S"):
+					outfile.write('\n\n'+iPhone5sLabel(products[i]))
+				else:
+					outfile.write('\n\n'+iPhoneLabel(products[i]))
 		elif(deviceType == "IPAD"):
 			for j in range(products[i].getNumLabels()):
 				outfile.write('\n\n'+iPadLabel(products[i]))
@@ -73,6 +76,14 @@ def csvParser(myString):
 
 def iPhoneLabel(product):
 	output = '<div class="iPhoneLabels '+str(product.getColor())+'">\n<div class="carrier">'+str(product.getCarrier())+'</div>\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="details">\n<div class="size">'+str(product.getSize())+'</div>\n<div class="color">'+str(product.getColor())+'</div>\n</div>\n</div>'
+	return output
+
+def iPhone5sLabel(product):
+	color = product.getColor()
+	if (color.upper() == "SPACEGRAY"):
+		output = '<div class="iPhone5sLabels2 '+str(product.getColor())+'">\n<div class="carrier">'+str(product.getCarrier())+'</div>\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="details">\n<div class="size">'+str(product.getSize())+'</div>\n<div class="color">'+str(product.getColor())+'</div>\n</div>\n</div>'
+	else:
+		output = '<div class="iPhone5sLabels1 '+str(product.getColor())+'">\n<div class="carrier">'+str(product.getCarrier())+'</div>\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="details">\n<div class="size">'+str(product.getSize())+'</div>\n<div class="color">'+str(product.getColor())+'</div>\n</div>\n</div>'
 	return output
 
 def iPadLabel(product):

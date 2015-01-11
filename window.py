@@ -1,15 +1,17 @@
-import called
+import labels
 from Tkinter import *
 
 class Application(Frame):
 	def generateLabel(self):
-		called.yoMama()
+		labels.Generate()
+		self.quit()
 	def createWidgets(self):
-		self.label = Label(self, text="Click the button below when you are ready to generate the labels.")
+		self.label = Label(self)
+		self.label["text"] = "Click the button below when you are ready to generate the labels."
 
 		self.QUIT = Button(self)
 		self.QUIT["text"] = "QUIT"
-		self.QUIT["command"] =  self.quit
+		self.QUIT["command"] = self.quit
 
 		self.QUIT.grid()
 
