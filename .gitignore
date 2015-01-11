@@ -14,5 +14,8 @@
 ehthumbs.db
 Thumbs.db
 
+# Python files
+.pyc
+
 # Directory to ignore #
 node_modules/
