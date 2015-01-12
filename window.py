@@ -5,6 +5,7 @@ class Application(Frame):
 	def generateLabel(self):
 		labels.Generate()
 		self.quit()
+		return True
 	def createWidgets(self):
 		self.label = Label(self)
 		self.label["text"] = "Click the button below when you are ready to generate the labels."
