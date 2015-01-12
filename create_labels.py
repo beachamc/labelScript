@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import os, sys, webbrowser
 import subprocess
 
@@ -15,8 +17,13 @@ if __name__ == '__main__':
 		os.system('xdg-open ' + os.path.join(directory, "products.csv"))
 
 	## launch the gui
-	subprocess.call(['python', os.path.join(directory, 'window.py')])
+	process = subprocess.Popen(['python', os.path.join(directory, 'window.py')], stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+	value = process.communicate()[0]
+	value = value[:-1]
 
 	## open labels.py 
-	print('process done, opening browser')
-	webbrowser.open('file://' + os.path.join(directory, "labels.html"))
+	if(value == 'Continue'):
+		print('process done, opening browser')
+		webbrowser.open('file://' + os.path.join(directory, "labels.html"))
+	else:
+		print('quitting...')
