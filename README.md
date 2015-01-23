@@ -13,6 +13,8 @@ This will install the following dependencies:
   * [Grunt Uglify ~0.5.1](https://www.npmjs.com/package/grunt-contrib-uglify)
 * [MatchDep ~0.1.2](https://www.npmjs.com/package/matchdep)
 
+** it is worth noting that I had to install grunt by using the ```sudo npm install -g grunt-cli``` command **
+
 Next, you will need [Ruby](https://www.ruby-lang.org/en/documentation/installation/) so that you can install [SASS](http://sass-lang.com/) by using the command ```sudo gem install sass```
 
 Finally, this project uses [Python 2.7.X](https://www.python.org/downloads/) for the actual script itself. 
