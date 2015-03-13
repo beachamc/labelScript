@@ -5,8 +5,8 @@
 	&:nth-of-type(8n) {
 		page-break-after: always;
 	}
-	background: $spaceGray;
-	color: $white;
+	background: $white;
+	color: $black;
 	margin: .1in;
 	width: $inch * 3.5;
 	height: $inch * .875;
