@@ -1,7 +1,7 @@
 # labelScript
 A short script to generate labels in html
 
-I created this script to be used to easily create labels for iPhones/iPads/Computers at the Apple Store.
+I created this script to be used to easily create labels for iPhones/iPads/Computers/Watches at the Apple Store.
 
 ## Dependencies
 This project makes use of a package.json file that will install some of the dependencies. To use this you need to have [Node.js](http://nodejs.org/download/) installed. Then, simply type ```npm install``` from within the project's root directory.
