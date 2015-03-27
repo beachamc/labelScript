@@ -75,8 +75,38 @@ def csvParser(myString):
 	return products
 
 def iPhoneLabel(product):
-	output = '<div class="iPhoneLabels '+str(product.getColor())+'">\n<div class="carrier">'+str(product.getCarrier())+'</div>\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="details">\n<div class="size">'+str(product.getSize())+'</div>\n<div class="color">'+str(product.getColor())+'</div>\n</div>\n</div>'
+	output = '<div class="iPhoneLabels ' + product.getColor() + '">\n\t<div class="partNum">' + product.getSku() + '</div>\n\t<div class="size">' + product.getSize() + '</div>\n\t<div class="phone">'+ phoneType(product.getName()) + '</div>\n\t<div class="carrier">' + carrierString(product.getCarrier()) + '</div>\n</div>'
 	return output
+
+def carrierString(string):
+	att = ['att', 'at&t', 'at']
+	verizon = ['verizon', 'vz']
+	sprint = ['sprint', 'sp']
+	tmobile = ['tmobile', 't-mobile', 'tm']
+	unlocked = ['unlocked', 'ul']
+
+	if string.lower() in att:
+		return 'AT'
+	elif string.lower() in verizon:
+		return 'VZ'
+	elif string.lower() in sprint:
+		return 'SP'
+	elif string.lower() in tmobile:
+		return 'TM'
+	elif string.lower() in unlocked:
+		return 'UL'
+
+
+def phoneType(string):
+	iphone5s = ['iphone 5s', '5s']
+	iphone6 = ['iphone 6', '6']
+	iphone6plus = ['iphone 6 plus', 'iphone 6+', '6+']
+	if string.lower() in iphone5s:
+		return '5s'
+	elif string.lower() in iphone6:
+		return '6'
+	elif string.lower() in iphone6plus:
+		return '6+'
 
 def iPhone5sLabel(product):
 	color = product.getColor()

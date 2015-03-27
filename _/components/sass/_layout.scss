@@ -96,29 +96,49 @@
 
 
 .iPhoneLabels {
+	font-family: $primary-medium;
+	background: $white !important;
 	margin: .1in;
-	width: $inch * 4.66; 
-	height: $inch * 2;
+	padding: 10px;
+	width: $inch * 4.5; 
+	height: $inch * 2.75;
+	border: 6px solid black;
 	text-align: center;
 	&:nth-of-type(4n) {
 		page-break-after: always;
 	}
+	.size {
+		line-height: $inch;
+		font-size: 48px;
+		display: inline-block;
+		float: left;
+		width: $inch;
+		height: $inch;
+		margin: 20px+(.125*$inch) ((.208 * $inch)-5px) 20px 8px;
+	}
+	.phone {
+		display: inline-block;
+		width: $inch * 1.25;
+		height: $inch * 1.25;
+		font-size: 70px;
+		line-height: $inch * 1.25;
+		float: left;
+		margin: 20px (.208 * $inch);
+	}
 	.carrier {
-		background: $black;
-		font-size: 29px;
-		padding: 10px;
+		line-height: $inch;
+		font-size: 48px;
+		display: inline-block;
+		width: $inch;
+		height: $inch;
+		float: left;
+		margin: 20px+(.125*$inch) 5px 20px ((.208 * $inch)-5);
 	}
 	.partNum {
-		font-size: 60px;
-		padding: 15px
-	}
-	.details {
-		.size {
-			display: inline-block;
-		}
-		.color {
-			display: inline-block;
-		}
+		width: ($inch * 4.5) - 32px;
+		font-size: 64px;
+		text-align: center;
+		color: $black !important;
 	}
 }
 
@@ -233,21 +253,30 @@
 .SILVER {
 	background: $silver;
 	color: $black;
-	.carrier {
-		color: $white;
+	border-color: $silver;
+	.size, .phone, .carrier {
+		background: $silver;
+		color: $black;
 	}
 }
 
 .SPACEGRAY {
 	background: $spaceGray;
 	color: $white;
+	border-color: $spaceGray;
+	.size, .phone, .carrier {
+		background: $spaceGray;
+		color: $white;
+	}
 }
 
 .GOLD {
 	background: $gold;
 	color: $black;
-	.carrier {
-		color: $white;
+	border-color: $gold;
+	.size, .phone, .carrier {
+		background: $gold;
+		color: $black;
 	}
 }
 
