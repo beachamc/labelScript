@@ -111,9 +111,9 @@ def phoneType(string):
 def iPhone5sLabel(product):
 	color = product.getColor()
 	if (color.upper() == "SPACEGRAY"):
-		output = '<div class="iPhone5sLabels2 '+str(product.getColor())+'">\n<div class="carrier">'+str(product.getCarrier())+'</div>\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="details">\n<div class="size">'+str(product.getSize())+'</div>\n<div class="color">'+str(product.getColor())+'</div>\n</div>\n</div>'
+		output = '<div class="iPhone5sLabels1 '+str(product.getColor())+'">\n\t<div class=partNum>' + product.getSku() + '</div>\n\t<div class="size">' + product.getSize() + '</div>\n\t<div class="phone">' + phoneType(product.getName()) + '</div>\n\t<div class="carrier">' + carrierString(product.getCarrier()) + '</div>\n</div>'
 	else:
-		output = '<div class="iPhone5sLabels1 '+str(product.getColor())+'">\n<div class="carrier">'+str(product.getCarrier())+'</div>\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="details">\n<div class="size">'+str(product.getSize())+'</div>\n<div class="color">'+str(product.getColor())+'</div>\n</div>\n</div>'
+		output = '<div class="iPhone5sLabels2 '+str(product.getColor())+'">\n\t<div class=partNum>' + product.getSku() + '</div>\n\t<div class="size">' + product.getSize() + '</div>\n\t<div class="phone">' + phoneType(product.getName()) + '</div>\n\t<div class="carrier">' + carrierString(product.getCarrier()) + '</div>\n</div>'
 	return output
 
 def iPadLabel(product):

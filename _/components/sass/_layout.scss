@@ -169,57 +169,98 @@
 	}
 }
 
-.iPhone5sLabels2 {
+.iPhone5sLabels1 {
+	font-family: $primary-medium;
+	background: $white !important;
 	margin: .1in;
-	width: $inch * 7; 
-	height: $inch * 2;
+	padding: 10px;
+	width: $inch * 5.5; 
+	height: $inch * 2.75;
+	border: 6px solid black;
 	text-align: center;
-	&:nth-of-type(4n) {
+	&:nth-of-type(3n) {
 		page-break-after: always;
 	}
+	.size {
+		line-height: $inch;
+		font-size: 48px;
+		display: inline-block;
+		float: left;
+		width: $inch;
+		height: $inch;
+		margin: 29px+(.1*$inch) ((.1 * $inch)-5px) 20px 7px + ($inch * .75);
+	}
+	.phone {
+		display: inline-block;
+		width: $inch * 1.2;
+		height: $inch * 1.2;
+		font-size: 70px;
+		line-height: $inch * 1.2;
+		float: left;
+		margin: 29px (.1 * $inch);
+	}
 	.carrier {
-		background: $black;
-		font-size: 29px;
-		padding: 10px;
+		line-height: $inch;
+		font-size: 48px;
+		display: inline-block;
+		width: $inch;
+		height: $inch;
+		float: left;
+		margin: 29px+(.1*$inch) 5px 20px ((.1 * $inch)-5);
 	}
 	.partNum {
-		font-size: 48px;
-		padding: 15px
-	}
-	.details {
-		.size {
-			display: inline-block;
-		}
-		.color {
-			display: inline-block;
-		}
+		width: ($inch * 4) - 32px;
+		font-size: 58px;
+		text-align: center;
+		color: $black !important;
+		margin-left: ($inch * .75);
 	}
 }
 
-.iPhone5sLabels1 {
+.iPhone5sLabels2 {
+	font-family: $primary-medium;
+	background: $white !important;
 	margin: .1in;
-	width: $inch * 3.5; 
-	height: $inch * 2;
+	padding: 10px;
+	width: $inch * 4; 
+	height: $inch * 2.75;
+	border: 6px solid black;
 	text-align: center;
-	&:nth-of-type(4n) {
+	&:nth-of-type(3n) {
 		page-break-after: always;
 	}
+	.size {
+		line-height: $inch;
+		font-size: 48px;
+		display: inline-block;
+		float: left;
+		width: $inch;
+		height: $inch;
+		margin: 29px+(.1*$inch) ((.1 * $inch)-5px) 20px 7px;
+	}
+	.phone {
+		display: inline-block;
+		width: $inch * 1.2;
+		height: $inch * 1.2;
+		font-size: 70px;
+		line-height: $inch * 1.2;
+		float: left;
+		margin: 29px (.1 * $inch);
+	}
 	.carrier {
-		background: $black;
-		font-size: 29px;
-		padding: 10px;
+		line-height: $inch;
+		font-size: 48px;
+		display: inline-block;
+		width: $inch;
+		height: $inch;
+		float: left;
+		margin: 29px+(.1*$inch) 5px 20px ((.1 * $inch)-5);
 	}
 	.partNum {
-		font-size: 48px;
-		padding: 15px
-	}
-	.details {
-		.size {
-			display: inline-block;
-		}
-		.color {
-			display: inline-block;
-		}
+		width: ($inch * 4) - 32px;
+		font-size: 58px;
+		text-align: center;
+		color: $black !important;
 	}
 }
 
