@@ -29,7 +29,10 @@ def Generate():
 				outfile.write('\n\n'+iPadLabel(products[i]))
 		elif(deviceType == "CPU"):
 			for j in range(products[i].getNumLabels()):
-				outfile.write('\n\n'+CPULabel(products[i]))
+				if(products[i].getName().upper() == "MACBOOK"):
+					outfile.write('\n\n'+MacBookLabel(products[i]))
+				else:
+					outfile.write('\n\n'+CPULabel(products[i]))
 		else:
 			pass
 			## will be expanded to custom labels in the future
@@ -122,6 +125,10 @@ def iPadLabel(product):
 
 def CPULabel(product):
 	output = '<div class="computerLabels">\n<div class="leftBox">\n<div class="computer">'+str(product.getName())+'</div>\n</div>\n<div class="rightBox">\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="specs">'+str(product.getSpecs())+'</div>\n</div>\n</div>'
+	return output
+
+def MacBookLabel(product):
+	output = '<div class="computerLabels ' + product.getColor().upper() + '">\n<div class="leftBox">\n<div class="computer">'+str(product.getName())+'</div>\n</div>\n<div class="rightBox">\n<div class="partNum">'+str(product.getSku())+'</div>\n<div class="specs">'+str(product.getSpecs())+'</div>\n</div>\n</div>'
 	return output
 
 if __name__ == '__main__':
